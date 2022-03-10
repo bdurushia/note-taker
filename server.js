@@ -1,33 +1,21 @@
+// Require route modules
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes/index');
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
-// const util = require('util`');
-
-// Set up Server
+// Set up the Server with Express
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-// Handling asynchronous items
-
-// get route
-// app.get('/', (req, res) => {
-    
-// })
-
-// Setup HTML Routes
-app.get('/notes', function(req, res) {
-    res.sendFile(path.join(__dirname, '/public/notes.html'));
-});
-
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
-});
-
-app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
-});
-
-
+// Parse incoming string or array data
+app.use(express.urlencoded({ extended: true }));
+// Parse incoming JSON data
+app.use(express.json());
+// Use Middleware to access static files in Public Folder
+app.use('/', express.static(path.join(__dirname, '/public')));
+// Use Routes
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
+// Run server on PORT
 app.listen(PORT, function() {
     console.log('Listening on PORT ' + PORT);
 });

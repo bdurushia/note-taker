@@ -1,6 +1,12 @@
 [
     {
         "title":"Test Title",
-        "text":"Test text"
+        "text":"Test text",
+        "id":"0"
+    },
+    {
+        "title":"Hardcoded Note",
+        "text":"here is a note that is pre-existing",
+        "id":"1"
     }
 ]
