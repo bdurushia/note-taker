@@ -18,6 +18,7 @@
 
   ## Installation
   Node.js must be installed to run this application. Once the repository is cloned, in your terminal at the applications index directory, run the command `npm install` or `npm i` to install dependencies. Next run `npm run devStart` to start the server. It will prompt you that it's listening at localhost:3001 and you can navigate to that in your browser to test the application. The app is also hosted on Heroku which can be found here: 
+  - [Heroku Deployed Application](https://note-taker-bdurushia.herokuapp.com/)
 
   ## Usage
   Use this application to create, view, and save notes for your daily tasks and needs without worrying about losing them due to the app serving a database.
