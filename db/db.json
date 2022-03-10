@@ -1,12 +1,7 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text",
-        "id":"0"
-    },
-    {
-        "title":"Hardcoded Note",
-        "text":"here is a note that is pre-existing",
-        "id":"1"
-    }
+  {
+    "title": "Note Example",
+    "text": "Here is a pre-saved example note that may be deleted.",
+    "id": "9eFbRQ"
+  }
 ]
