@@ -16,6 +16,6 @@ app.use('/', express.static(path.join(__dirname, '/public'))); //Had issues with
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 // Run server on PORT
-app.listen(PORT, function() {
-    console.log('Listening on PORT ' + PORT);
-});
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
