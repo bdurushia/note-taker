@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 // Parse incoming JSON data
 app.use(express.json());
 // Use Middleware to access static files in Public Folder
-app.use('/', express.static(path.join(__dirname, '/public')));
-// Use Routes
+app.use('/', express.static(path.join(__dirname, '/public'))); //Had issues with writing this as app.use(express.static('public)); and so must be written as current setup otherwise the assets/CSS and assets/JS won't route properly 
+// Use Routes from route folder
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 // Run server on PORT

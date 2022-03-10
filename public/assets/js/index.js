@@ -187,6 +187,7 @@ if (window.location.pathname === '/notes') {
 
   // Using JQuery to easily add event listener to dynamically created list items
   $('.list-group').on('click', '.list-group-item', handleNoteView);
+  
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
